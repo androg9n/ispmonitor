@@ -4,9 +4,9 @@ A simple service to monitor the quality of internet resource accessibility from 
 
 ![ISP Monitoring Dashboard Screenshot](images/Screenshot1.png "ISP Monitoring Dashboard Screenshot")
 
-[ISP Monitoring Dashboard Screenshot1](images/Screenshot1.png)
-[ISP Monitoring Dashboard Screenshot2](images/Screenshot2.png)
-[ISP Monitoring Dashboard Screenshot3](images/Screenshot3.png)
+[Screenshot1](images/Screenshot1.png)
+[Screenshot2](images/Screenshot2.png)
+[Screenshot3](images/Screenshot3.png)
 
 ## How It Works
 
@@ -48,11 +48,23 @@ Docker Compose provides a universal platform to run containerized services on an
 
 1. Ensure Docker Compose is installed on your host. [Installation instructions](https://docs.docker.com/compose/install/).
 2. Open a terminal in the `ispmonitor` code directory.
-3. Navigate to the `docker-compose` directory: `cd docker-compose`.
+3. Navigate to the `docker-compose` directory:
+   ```bash
+   cd docker-compose 
+   ```
 4. Start the services with the command: `docker compose up -d`.
+   ```bash
+   docker compose up -d
+   ```
 5. Open the Grafana web interface (see instructions below).
-5. To stop the services, run: `docker compose down` from the `docker-compose` directory.
-6. To delete all collected service data, run: `docker compose down -v` from the same directory.
+5. To stop the services, run from the `docker-compose` directory:
+   ```bash
+   docker compose down
+   ```
+6. To delete all collected service data, run from the same directory:
+   ```bash
+   docker compose down -v
+   ```
 
 ## Using the Grafana Web Interface to Monitor Statistics
 
