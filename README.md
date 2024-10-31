@@ -28,7 +28,7 @@ A simple service to monitor the quality of internet resource accessibility from 
      ```bash
      cd ispmonitor
      ```
-## Configuration
+## Configuration (optional)
 
 1. Open the file `ispmonitor-telegraf.conf` with your preferred text editor.
 2. Update the URL list in the `inputs.ping` plugin block to specify hosts and domains for which you want to collect ping statistics.
@@ -37,10 +37,6 @@ A simple service to monitor the quality of internet resource accessibility from 
    - **Example**: Replace `"192.168.1.1"` with your router's IP or preferred DNS server. Add or remove DNS servers as needed.
 4. Update the domain list in the `inputs.dns_query` plugin block with the domains you want to track for DNS requests.
    - Add or remove domains as necessary.
-
-## Starting with Docker Compose
-
-Docker Compose provides a universal platform to run containerized services on any host.
 
 ## Starting with Docker Compose
 
