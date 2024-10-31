@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ispmonitor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ispmonitor
+  template:
+    metadata:
+      labels:
+        app: ispmonitor
+    spec:
+      containers:
+        - name: ispmonitor
+          image: telegraf:1.27.3-alpine
+          ports:
+            - containerPort: 9283
+          volumeMounts:
+            - name: config
+              mountPath: /etc/telegraf/telegraf.conf
+              subPath: ispmonitor-telegraf.conf
+      volumes:
+        - name: config
+          configMap:
+            name: ispmonitor-config
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ispmonitor
+spec:
+  selector:
+    app: ispmonitor
+  ports:
+    - protocol: TCP
+      port: 9283
+      targetPort: 9283
