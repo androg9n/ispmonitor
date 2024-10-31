@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  ispmonitor:
+    image: telegraf:1.27.3-alpine
+    ports:
+      - "9283:9283"
+    volumes:
+      - ./ispmonitor-telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    networks:
+      - ispmonitor_network
+
+  prometheus:
+    image: prom/prometheus:v2.55.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    networks:
+      - ispmonitor_network
+    depends_on:
+      - ispmonitor
+
+  grafana:
+    image: grafana/grafana:11.3.0
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./grafana-datasource.yaml:/etc/grafana/provisioning/datasources/grafana-datasource.yaml
+      - ./grafana-dashdoards-prov.yaml:/etc/grafana/provisioning/dashboards/grafana-dashdoards-prov.yaml
+      - ./grafana-ispmonitor-dashboard.json:/etc/grafana/provisioning/dashboards/grafana-ispmonitor-dashboard.json
+    networks:
+      - ispmonitor_network
+    depends_on:
+      - prometheus
+
+networks:
+  ispmonitor_network:
+
+volumes:
+  grafana-storage: {}
+  prometheus-data: {}
