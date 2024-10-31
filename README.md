@@ -2,6 +2,12 @@
 
 A simple service to monitor the quality of internet resource accessibility from your host. This tool uses `ping` to gather measurable metrics, collects them, and presents a useful visual dashboard.
 
+![ISP Monitoring Dashboard Screenshot](images/Screenshot1.png "ISP Monitoring Dashboard Screenshot")
+
+[ISP Monitoring Dashboard Screenshot1](images/Screenshot1.png)
+[ISP Monitoring Dashboard Screenshot2](images/Screenshot2.png)
+[ISP Monitoring Dashboard Screenshot3](images/Screenshot3.png)
+
 ## How It Works
 
 - **Telegraf** - Executes automated `ping` requests to configured URLs and hosts. Shares gathered metrics via an HTTP endpoint.
