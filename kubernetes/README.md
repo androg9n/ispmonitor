@@ -2,7 +2,7 @@
 
 ## Prerquisites
 
-1. Kubernates cluster, configured **kubectl**, running ingress conroller
+1. Kubernetes cluster, configured **kubectl**, running ingress conroller
 2. Domain `grafana.lan` must resolve address of your ingress controller
 
 ## Configuration (Optional)

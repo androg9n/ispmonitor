@@ -32,7 +32,7 @@ This tool uses `ping` and dns requests to gather measurable metrics, collects th
 ## Starting
 
 - [Starting with Docker Compose](/docker-compose/README.md#starting-with-docker-compose)
-- [Starting with Kubernates](/kubernetes/README.md#starting-with-kubernates)
+- [Starting with Kubernetes](/kubernetes/README.md#starting-with-kubernates)
 
 ## Using the Grafana Web Interface to Monitor Statistics
 
