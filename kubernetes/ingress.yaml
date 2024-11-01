@@ -4,23 +4,9 @@ metadata:
   name: ispmonitor-ingress
 spec:
   rules:
-    - host: akorotkov.application.com
+    - host: grafana.lan
       http:
         paths:
-          - path: /telegraf
-            pathType: Prefix
-            backend:
-              service:
-                name: ispmonitor
-                port:
-                  number: 9283
-          - path: /prometheus
-            pathType: Prefix
-            backend:
-              service:
-                name: prometheus
-                port:
-                  number: 9090
           - path: /
             pathType: Prefix
             backend:
@@ -28,3 +14,23 @@ spec:
                 name: grafana
                 port:
                   number: 3000
+    - host: prometheus.lan
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: prometheus
+                port:
+                  number: 9090
+    - host: telegraf.lan
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ispmonitor
+                port:
+                  number: 9283
