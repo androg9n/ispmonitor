@@ -1,6 +1,6 @@
 # Starting with Docker Compose
 
-##Prerquisites
+## Prerquisites
 
 1. Docker Compose is installed on your host. [Installation instructions](https://docs.docker.com/compose/install/).
 
@@ -14,7 +14,7 @@
 4. Update the domain list in the `inputs.dns_query` plugin block with the domains you want to track for DNS requests
    - Add or remove domains as necessary
 
-## Starting, stopping, removing 
+## Starting
 
 1. Open a terminal in the `ispmonitor` code directory.
 2. Navigate to the `docker-compose` directory:

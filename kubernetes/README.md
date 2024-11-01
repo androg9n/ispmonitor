@@ -1,8 +1,8 @@
-# Starting with Kubernates
+# Starting with Kubernetes
 
-##Prerquisites
+## Prerquisites
 
-1. Kubernates cluster, configured kubectl, running ingress conroller
+1. Kubernates cluster, configured **kubectl**, running ingress conroller
 2. Domain `grafana.lan` must resolve address of your ingress controller
 
 ## Configuration (Optional)
@@ -19,13 +19,13 @@
 
 1. Deploy and start the resources with the command:
    ```bash
-   kubectl apply -f ./kubernetes/
+   kubectl apply -f kubernetes/
    ```
 2. Control rollout of application's pods by STATUS using command:
    ```bash
    kubectl get pods
    ```
-3. After all pods are running open Grafana in your web browser: [http://grafana.lan](http://grafana.lan)
+3. After all pods are **Running** open Grafana in your web browser: [http://grafana.lan](http://grafana.lan)
 4. Follow [instructions](https://github.com/androg9n/ispmonitor#using-the-grafana-web-interface-to-monitor-statistics) to use Grafana Web Interface to Monitor Statistics
 
 ## Stopping and removing
