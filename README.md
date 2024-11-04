@@ -5,9 +5,7 @@ This tool uses `ping` and dns requests to gather measurable metrics, collects th
 
 ![ISP Monitoring Dashboard Screenshot](images/Screenshot1.png "ISP Monitoring Dashboard Screenshot")
 
-[Screenshot1](images/Screenshot1.png)
-[Screenshot2](images/Screenshot2.png)
-[Screenshot3](images/Screenshot3.png)
+[More screenshots](https://github.com/androg9n/ispmonitor/tree/main/images)
 
 ## How It Works
 
