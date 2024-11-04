@@ -38,3 +38,5 @@ This tool uses `ping` and dns requests to gather measurable metrics, collects th
 2. On the Welcome page, access the **ISP Monitoring** dashboard from the bottom left corner or by navigating to **Dashboards > ISP Monitoring** in the main menu.
 3. If statistics don’t appear immediately, wait 30 seconds or use the Refresh button in the top-right corner.
 4. Use the **Variables** bar (top-left corner) and **Time Range** (top-right corner) to customize the dashboard visualizations.
+
+🤝Thanks to Karan Sharma for the [concept](https://mrkaran.dev/posts/isp-monitoring/)
